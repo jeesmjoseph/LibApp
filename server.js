@@ -1,8 +1,6 @@
-// Part #1 Point 1
-// Renamed app.js as server.js which is the main file
+/
 const express = require('express'); 
 const path = require ('path'); 
-// Part #1 Point 2
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -45,7 +43,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
 
 
-// Part #2 Point 2
 app.use(cors());
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
@@ -61,7 +58,6 @@ app.get('/',function(req,res){
     
 });
 
-// Part #1 Point 5
 app.listen(5000,()=>{
     console.log("Server Ready on 5000");
 });
